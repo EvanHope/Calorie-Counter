@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root "counter#index"
+  root "foods#index"
 
-
-  get "/counter", to: "counter#index"
+  resources :foods
 end
