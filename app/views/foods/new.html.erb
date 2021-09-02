@@ -1,23 +1,4 @@
 <h1> New Food </h1>
 
-<%= form_with model: @food do |form| %>
-    <div>
-        <%= form.label :name %><br>
-        <%= form.text_area :name %>
-        <% @food.errors.full_messages_for(:name).each do |message| %>
-        <div><%= message %></div>
-        <% end %>
-    </div>
+<%= render "form", food: @food %>
 
-    <div>
-        <%= form.label :calories %><br>
-        <%= form.text_area :calories %>
-        <% @food.errors.full_messages_for(:calories).each do |message| %>
-        <div><%= message %></div>
-        <% end %>
-    </div>
-
-    <div>
-        <%= form.submit %>
-    </div>
-<% end %>
