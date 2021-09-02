@@ -41,7 +41,7 @@ class FoodsController < ApplicationController
 
     redirect_to root_path
   end
-  
+
   private
     def food_params
       params.require(:food).permit(:name, :calories)

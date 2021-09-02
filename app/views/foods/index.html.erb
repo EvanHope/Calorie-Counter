@@ -1,12 +1,16 @@
 
-<h1> Foods <h1>
+<h1> Foods </h1>
 
 <ul>
     <% @foods.each do |food| %>
         <li>
-            <%= link_to food.name, food %>
+            <%= link_to food.name, food %> Calories: <%= food.calories %>
         </li>
     <% end %>
 </ul>
+
+
+<div> Total Calories: <%= calorieSum(@foods) %></div>
+
 
 <%= link_to "New Food", new_food_path %>
