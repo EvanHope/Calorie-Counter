@@ -31,10 +31,29 @@ ul {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a.btn-inverse:link {
+a.btn-food:link {
     color: red;
     text-decoration: none;
 }
-a.btn-inverse:visited {
+a.btn-food:visited {
     color: rgb(142, 202, 230);
+    text-decoration: none;
+}
+a.btn-food:hover {
+    text-decoration: underline;
+}
+a.btn-food:active {
+    color: red;
+    text-decoration: underline;
+}
+
+a.btn-new {
+    text-decoration: none;
+    background-color: rgb(142, 202, 230);
+    color: #000000;
+    padding: 4px 12px 4px 12px;
+    border-top: 1px solid #4d4d4d;
+    border-right: 1px solid #4d4d4d;
+    border-bottom: 1px solid #4d4d4d;
+    border-left: 1px solid #4d4d4d;
 }
