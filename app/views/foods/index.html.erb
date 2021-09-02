@@ -1,16 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <title> Foods </title>
+    </head>
 
-<h1> Foods </h1>
+    <body>
+        <h1> Foods </h1>
+        <p> This text should be bluea
+            <ul>
+        
+                <% @foods.each do |food| %>
+                    
+                        <li><%= link_to food.name, food, class: "btn btn-inverse" %> Calories: <%= food.calories %></li>
+                    
+                <% end %>
+            </ul>
 
-<ul>
-    <% @foods.each do |food| %>
-        <li>
-            <%= link_to food.name, food %> Calories: <%= food.calories %>
-        </li>
-    <% end %>
-</ul>
+            Total Calories: <%= calorieSum(@foods) %></p>
 
-
-<div> Total Calories: <%= calorieSum(@foods) %></div>
-
-
-<%= link_to "New Food", new_food_path %>
+            <%= link_to "New Food", new_food_path %>
+        
+    </body>
+</html>
