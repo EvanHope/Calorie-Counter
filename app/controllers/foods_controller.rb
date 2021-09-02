@@ -12,7 +12,7 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = Food.new(name: "...", calories: 10)
+    @food = Food.new(food_params)
 
     if @food.save
       redirect_to @food
