@@ -4,6 +4,7 @@
     </head>
 
     <body>
+        <%= button_to "logout", destroy_user_session_path, method: :delete %>
         <h1> Foods </h1>
         <p>
             <ul>
