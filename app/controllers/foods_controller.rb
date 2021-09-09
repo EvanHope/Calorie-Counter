@@ -1,6 +1,9 @@
 class FoodsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @foods = Food.all
+    @current_user_id = current_user.id
+    @foods = Food.where(userid: @current_user_id)
   end
 
   def show
@@ -12,7 +15,8 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = Food.new(food_params)
+
+    @food = Food.new(name: params[:food][:name], calories: params[:food][:calories], userid: current_user.id)
 
     if @food.save
       redirect_to @food
@@ -44,6 +48,6 @@ class FoodsController < ApplicationController
 
   private
     def food_params
-      params.require(:food).permit(:name, :calories)
+      params.require(:food).permit(:name, :calories, :userid)
     end
 end
