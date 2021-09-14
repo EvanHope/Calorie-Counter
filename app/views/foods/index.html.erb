@@ -3,8 +3,13 @@
         <title> Foods </title>
     </head>
 
+    <div class="header">
+        <h1>Header</h1>
+        <p>My supercool header</p>
+        <%= button_to "logout", destroy_user_session_path, method: :delete, form_class: 'btn btn-logout' %>
+    </div>
+
     <body>
-        <%= button_to "logout", destroy_user_session_path, method: :delete %>
         <h1> Foods </h1>
         <p>
             <ul>
@@ -15,4 +20,9 @@
             Total Calories: <%= calorieSum(@foods) %></p>
             <%= link_to "Add New Food", new_food_path, class: "btn btn-new" %>
     </body>
+
+    <footer>
+        <p>Created By: Evan Hope</p>
+        <p><a href="hopee1@tcnj.edu">hopee1@tcnj.edu</a></p>
+    </footer>
 </html>
