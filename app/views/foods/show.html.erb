@@ -1,12 +1,13 @@
 <h1><%= @food.name %></h1>
 
-<p><%= @food.calories %></p>
+<%= link_to "Home", foods_path, class: "btn btn-show"%>
 
+
+<p>Calories: <%= @food.calories %></p>
 <ul>
-    <li><%= link_to "Edit", edit_food_path(@food), class: "btn btn-show" %></li>
-    <li><%= link_to "Destroy", food_path(@food),
+    <%= link_to "Edit", edit_food_path(@food), class: "btn btn-show" %>
+    <%= link_to "Destroy", food_path(@food),
                     method: :delete,
-                    data: { confirm: "Are you sure?" } , class: "btn btn-show" %></li>
+                    data: { confirm: "Are you sure?" } , class: "btn btn-show" %>
 </ul>
 
-<%= link_to "Home", foods_path, class: "btn btn-show"%>
