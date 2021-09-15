@@ -46,7 +46,7 @@ ul.foodList {
     text-align: center;
 
     display: inline-grid;
-    grid-template-columns: repeat(2, 20em);
+    grid-template-columns: repeat(2, 15em);
     justify-content: start;
 }
 
@@ -55,11 +55,11 @@ li{
 
 a.btn:link {
     color: rgb(75, 101, 135);
-    text-decoration: none;
+    text-decoration: underline;
 }
 a.btn:visited {
     color: rgb(75, 101, 135);
-    text-decoration: none;
+    text-decoration: underline;
 }
 a.btn:hover {
     text-decoration: underline;
@@ -91,6 +91,17 @@ a.btn-new:link{
 }
 a.btn-new:visited{
     color: #ffffff;
+}
+
+ul.showOptions {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    display: inline-grid;
+    grid-template-columns: repeat(3, 5em);
+    justify-content: start;
+    align-self: center;
 }
 
 
