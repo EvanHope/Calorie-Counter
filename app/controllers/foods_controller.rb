@@ -8,9 +8,10 @@ class FoodsController < ApplicationController
 
   def show
     @food = Food.find(params[:id])
-    if @food.userid != @current_user_id #checks if food user is trying to view is connected to users id
-      redirect_to root_path #TODO: Show error message that food doesnt exisit
-    end
+    #if @food.userid != @current_user_id #checks if food user is trying to view is connected to users id
+    #  redirect_to root_path #TODO: Show error message that food doesnt exisit
+    #else
+    #end
   end
 
   def new
