@@ -10,6 +10,10 @@ class FoodsController < ApplicationController
   #shows individual foods based on food id (can be made more secure by ensuring the user id is the same aswell)
   def show
     @food = Food.find(params[:id])
+    #if @food.userid != @current_user_id #checks if food user is trying to view is connected to users id
+    #  redirect_to root_path #TODO: Show error message that food doesnt exisit
+    #else
+    #end
   end
 
   def new
@@ -18,7 +22,6 @@ class FoodsController < ApplicationController
 
   #Creates a new food using the form submitted by user
   def create
-
     @food = Food.new(name: params[:food][:name], calories: params[:food][:calories], userid: current_user.id)
 
     if @food.save

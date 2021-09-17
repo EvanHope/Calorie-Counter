@@ -1,24 +1,8 @@
-# README
+# Calorie Counter
+App created to allow users to track their caloric intake.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Live site availible at: https://arcane-brushlands-67236.herokuapp.com/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Future Features
+- Seperating inputs by day.
+- Nutrition API allowing users to look up common foods.
